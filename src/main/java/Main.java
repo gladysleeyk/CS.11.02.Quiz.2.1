@@ -1,6 +1,33 @@
 public class Main {
 
+    public static int add(int numOne, int numTwo){
+        return numOne+numTwo;
+    }
+
+    public static String greeting(String name){
+        return "Bonjour, " + name + "!";
+    }
+
+    public static int add(int numOne, int numTwo, int numThree, int numFour){
+        int sumOne = add(numOne, numTwo);
+        int sumTwo = add(numThree, numFour);
+        int finalSum = add(sumOne, sumTwo);
+        return finalSum;
+    }
+
+    public static void printCapitalised(String toBePrinted){
+        System.out.println(toBePrinted.toUpperCase());
+    }
+
     public static void main(String[] args) {
+        int resultOne = add(2,2);
+        System.out.println(resultOne);
+        String resultTwo = greeting("Emily");
+        System.out.println(resultTwo);
+        int resultThree = add(18,18,12,8);
+        System.out.println(resultThree);
+        printCapitalised("heyyy");
+
 
         // call the first add method and store the result into a variable called resultOne.
 
